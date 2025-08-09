@@ -17,5 +17,5 @@ export default function Square() {
         <button className="square">9</button>
       </div>
     </>
-  );</div>
+  );
 }
