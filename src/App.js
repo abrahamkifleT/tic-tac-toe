@@ -93,7 +93,7 @@ export default function Game() {
     }
     return (
       <li>
-        <button onClick={() => jumpTo(move)}>description</button>
+        <button onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
   });
