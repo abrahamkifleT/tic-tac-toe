@@ -11,7 +11,11 @@ function Square({ value, onSquareClick }) {
 export default function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
 
-  function handleClick() {}
+  function handleClick() {
+    const nextSquare = squares.slice();
+    nextSquare[0] = "X";
+    setSquares(nextSquare);
+  }
   return (
     <>
       <div className="board-row">
