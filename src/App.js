@@ -15,6 +15,14 @@ export default function Board() {
   function handleClick(i) {
     const nextSquare = squares.slice();
 
+    const winner = calculateWinner(squares);
+    let status;
+    if (winner) {
+      status = "Winner: " + winner;
+    } else {
+      status = "Next Player: " + (xIsNext ? "X" : "O");
+    }
+
     if (squares[i] || calculateWinner(squares)) {
       return;
     }
