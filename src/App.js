@@ -29,8 +29,7 @@ function Board({ xIsNext, squares, onPlay }) {
     } else {
       nextSquare[i] = "O";
     }
-    setSquares(nextSquare);
-    setXisNext(!xIsNext);
+    onPlay(nextSquare);
   }
   return (
     <>
