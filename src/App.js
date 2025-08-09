@@ -14,6 +14,7 @@ function Square() {
 }
 
 export default function Board() {
+  const [square, setSquare] = useState(Array(9).fill(null));
   return (
     <>
       <div className="board-row">
