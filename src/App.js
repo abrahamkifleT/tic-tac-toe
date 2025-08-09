@@ -78,7 +78,11 @@ export default function Game() {
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const currentSquares = history[history.length - 1];
 
-  function handlePlay(nextSquare) {}
+  function handlePlay(nextSquare) {
+    const nextHistory = [...history, nextSquare];
+    setHistory(nextHistory);
+    setXIsNext(!xIsNext);
+  }
 
   return (
     <div className="game">
